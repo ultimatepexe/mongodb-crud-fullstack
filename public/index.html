@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/script.js" defer></script>
+    <title>UsersDB</title>
+</head>
+<body>
+    <section>
+        <h1>
+            Add User
+        </h1>
+        <form id="addUserForm">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+            <br>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+            <br>
+            <input type="submit" value="Add User">
+        </form>
+        <pre id="addUserLog">
+            ...
+        </pre>
+    </section>
+
+    <section>
+        <h1>
+            Edit User
+        </h1>
+        <form id="editUserForm">
+            <label for="selectUserToEdit">Username:</label>
+            <input type="text" name="selectUserToEdit" id="selectUserToEdit" required>
+            <br>
+            <label for="newPassword">New Password:</label>
+            <input type="password" name="newPassword" id="newPassword">
+            <br>
+            <label for="newEmail">New Email:</label>
+            <input type="email" name="newEmail" id="newEmail">
+            <br>
+            <label for="newName">New Name:</label>
+            <input type="text" name="newName" id="newName">
+            <br>
+            <input type="submit" value="Edit User">
+        </form>
+        <pre id="editUserLog">
+            ...
+        </pre>
+    </section>
+
+    <section>
+        <h1>
+            Delete User
+        </h1>
+        <form id="deleteUserForm">
+            <label for="deleteUsername">Username:</label>
+            <input type="text" name="deleteUsername" id="deleteUsername" required>
+            <br>
+            <input type="submit" value="Delete User">
+        </form>
+        <pre id="deleteUserLog">
+            ...
+        </pre>
+    </section>
+
+    <section>
+        <h1>
+            Find User
+        </h1>
+        <form id="findUserForm">
+            <label for="findUsername">Username:</label>
+            <input type="text" name="findUsername" id="findUsername" required>
+            <br>
+            <input type="submit" value="Find User">
+        </form>
+        <pre id="findUserLog">
+            ...
+        </pre>
+    </section>
+
+    <section>
+        <h1>
+            Users:
+        </h1>
+        <button onclick="loadUsers()">
+            load
+        </button>
+        <ul>
+            ...
+        </ul>
+    </section>
+</body>
+</html>

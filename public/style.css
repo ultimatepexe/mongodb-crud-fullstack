@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: #eeeeee;
+}
+
+section {
+    border-left: solid 1px gray;
+    border-right: solid 1px gray;
+    padding: 3px;
+}
+
+pre {
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: pre-wrap;
+}
