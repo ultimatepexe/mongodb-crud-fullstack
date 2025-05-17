@@ -28,7 +28,7 @@ const userSchema = new Schema<IUser>({
         type: String,
         required: false,
     } 
-}); const User = mongoose.model<IUser>("Users", userSchema);
+}, { collection: "users" }); const User = mongoose.model<IUser>("User", userSchema);
 
 export async function connectToDatabase(): Promise<void> {
     if (!database) throw new Error(`Database doesn't exists.`);
@@ -64,22 +64,22 @@ export async function addUser(username: string, password: string, email?: string
 }
 
 export async function updateUser(username: string, newData: object): Promise<void> {
-    const result = await User.findOneAndUpdate(
+    const UpdatedUser = await User.findOneAndUpdate(
         { username: username },
         newData,
         { new: true }
     );
-    if (result) {
-        console.log("Updated user:", result);
+    if (UpdatedUser) {
+        console.log("Updated user:", UpdatedUser);
     } else {
         throw new Error(`User not found.`);
     }
 }
 
 export async function deleteUser(username: string): Promise<void> {
-    const result = await User.findOneAndDelete({ username: username });
-    if (result) {
-        console.log("Deleted user:", result);
+    const deletedUser = await User.findOneAndDelete({ username: username });
+    if (deletedUser) {
+        console.log("Deleted user:", deletedUser);
     } else {
         throw new Error(`User not found.`);
     }
